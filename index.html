@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nature</title>
+    <style>
+        body{
+            margin:0;
+            background: url('./village.jpg') 0 0 repeat-x;
+            height: 100vh;
+            background-size: 590px 100%;
+            animation: background 10s linear infinite;
+        }
+        
+        @keyframes background{
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -590px 0;
+            }
+        }
+        .mushroom{
+            position: fixed;
+            left: 125px;
+            top: 480px;
+            background: url('./mushroom.png') 0 0 no-repeat;
+            width: 189px;
+            height: 230px;
+            animation: walk 1s steps(3) infinite;
+        }
+
+        @keyframes walk{
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 0 -690px;
+            }
+        }
+
+        .fox{
+            position: fixed;
+            bottom: 40px;
+            right: 120px;
+            background: url('./fox.png') 0 0 no-repeat;
+            width: 153px;
+            height: 139px;
+            animation: run 1s steps(6) infinite;
+            transform: scaleX(-1);
+
+        }
+
+        @keyframes run{
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: -918px 0;
+            }
+            50.01%{ background-position: 0 -139px;
+            }
+            100% {
+                background-position: -918px -139px;
+            }
+        }
+
+        .butterfly{
+            position: fixed;
+            right: 490px;
+            top: 530px;
+            background: url('./butterfly.png') 0 0 no-repeat;
+            width: 100px;
+            height: 100px;
+            animation: fly 1s steps(10) infinite;
+            transform: scaleX(-1);
+
+        }
+
+        @keyframes fly{
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -1000px 0;
+            }
+        }
+
+        .robin{
+            position: fixed;
+            bottom: 450px;
+            left: 440px;
+            background: url('./robin.png') 0 0 no-repeat;
+            width: 240px;
+            height: 314px;
+            animation: bird 1s steps(5) infinite;
+            transform: scaleX(-1);
+        }
+
+        @keyframes bird{
+        0%{
+            background-position: 0 0;
+        }
+        25%{
+            background-position: -1200px 0;
+        }
+        25.01%{
+            background-position: 0 -314px;
+        }
+        50%{
+            background-position: -1200px -314px;
+        } 
+        50.01%{
+            background-position: 0 -628px;
+        }
+        75%{
+            background-position: -1200px -628px;
+        }
+        75.01%{
+            background-position: 0 -942px;
+        }
+        100%{
+            background-position: -1200px -942px;
+        }
+    }
+
+.front {
+           position: fixed;
+           top: 650px;
+           bottom: 0;
+           margin: auto;
+           background: url('./front.png') 0 0 repeat-x;
+           width: 2210px;
+           height: 327px;
+           animation: back 14s linear infinite;
+           z-index: 1;
+       }
+
+       @keyframes back {
+           from {
+               background-position: 0 0;
+           }
+           to {
+               background-position: -2210px 0;
+           }
+       }
+
+    </style>
+</head>
+<body>
+    <div class="mushroom"></div>
+    <div class="robin"></div>
+    <div class="fox"></div>
+    <div class="butterfly"></div>
+    <div class="front"></div>
+
+</body>
+</html>
